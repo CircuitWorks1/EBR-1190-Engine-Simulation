@@ -24,9 +24,13 @@ String rpmControl;
 //the microseconds needed to generate 34 wave forms, and 36 wave forms. This is used to properly simulate
 //the step pattern of the crank shaft(34 steps, then a blank spot the equivalent to 2 steps.)
 void rpmFunction() {
+  //Calculate the time period to execute 34 wave cycles at the freequency input from the serial monitor
   float rpmTime = 1 / rpmFreq * 1000000 * 34;
+  //Calculate the the time period to execute 36 wave cycles at the frequency input from the serial monitor
   float rpmRestart = 1 / rpmFreq * 1000000 * 36;
+  //
   if (currentMicros - previousMicros < rpmTime) {
+    //Generate a tone on pin 5 at the frequency input from the serial monitor
     tone(5, rpmFreq);
   }
   if (currentMicros - previousMicros > rpmTime) {
@@ -58,6 +62,7 @@ void setup() {
 }
 
 void loop() {
+  //start counting microseconds.
   currentMicros = micros();
 
   if (Serial.available()) {
