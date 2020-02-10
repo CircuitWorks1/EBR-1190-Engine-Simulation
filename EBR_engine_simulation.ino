@@ -17,7 +17,6 @@ unsigned long currentMicros = 0;
 
 int i = 0;
 int x = 0;
-String rpmControl;
 
 //This function takes the serial monitor input, applies it to be used as the simulated crank shaft sensor frequency,
 //then calculates the period of the waveform in microseconds. We then calculate
