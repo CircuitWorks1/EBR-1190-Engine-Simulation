@@ -6,7 +6,7 @@
 long previousMicros = 0;
 long speedMicros = 0;
 long int speedRestart;
-long int speedTime;
+long int speedTime; //A variable used to store the time to execute one complete wave cycle at the given frequency
 float inputFreq; //The value input from the serial monitor
 float speedFreq; //A variable to store the frequency for simulating the speed sensor tone ring
 float rpmFreq; //A variable used to store the frequency for simulating the crankshaft sensor output
