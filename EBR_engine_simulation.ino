@@ -21,7 +21,7 @@ unsigned long currentMicros = 0;
 void rpmFunction() {
   //Calculate the time period to execute 34 wave cycles at the freequency input from the serial monitor
   float rpmTime = 1 / rpmFreq * 1000000 * 34;
-  //Calculate the the time period to execute 36 wave cycles at the frequency input from the serial monitor
+  //Calculate the time period to execute 36 wave cycles at the frequency input from the serial monitor
   float rpmRestart = 1 / rpmFreq * 1000000 * 36;
   //
   if (currentMicros - previousMicros < rpmTime) {
