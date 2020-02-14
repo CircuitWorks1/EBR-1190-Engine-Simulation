@@ -7,15 +7,12 @@ long previousMicros = 0;
 long speedMicros = 0;
 long int speedRestart;
 long int speedTime;
-float inputFreq;
-float speedFreq;
-float rpmFreq;
-float rpmTime;
-float rpmRestart;
-unsigned long currentMicros = 0;
-
-int i = 0;
-int x = 0;
+float inputFreq; //The value input from the serial monitor
+float speedFreq; //A variable to store the frequency for simulating the speed sensor tone ring
+float rpmFreq; //A variable used to store the frequency for simulating the crankshaft sensor output
+float rpmTime; //This is the variable used to store the period used to execute 34 wave cycles at the given frequency
+float rpmRestart; //This variable stores the period used to execute 36 wave cycles at the given frequency
+unsigned long currentMicros = 0; 
 
 //This function takes the serial monitor input, applies it to be used as the simulated crank shaft sensor frequency,
 //then calculates the period of the waveform in microseconds. We then calculate
