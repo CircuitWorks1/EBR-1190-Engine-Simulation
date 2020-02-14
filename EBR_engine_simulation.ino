@@ -33,6 +33,7 @@ void rpmFunction() {
     tone(5, rpmFreq);
   }
   if (currentMicros - previousMicros > rpmTime) {
+    //stop tone on pin 5
     noTone(5);
   }
   if (currentMicros - previousMicros > rpmRestart) {
@@ -57,6 +58,7 @@ void speedFunction() {
 }
 
 void setup() {
+  //set pin35 to output. This will be the pin used to simulate 
   pinMode(35, OUTPUT);
 }
 
