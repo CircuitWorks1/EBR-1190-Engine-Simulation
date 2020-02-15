@@ -40,7 +40,7 @@ void rpmFunction() {
 //it then, calculates the period of the waveform in microseconds,and genarates a square wave, by
 //rapidly switching a pin between high and low.
 void speedFunction() {
-  float speedTime = 1 / speedFreq * 1000000;
+  float speedTime = 1 / speedFreq * 1000000/2;
   float speedRestart = speedTime * 2;
   if (currentMicros - speedMicros < speedTime) {
     digitalWrite(35, HIGH);
