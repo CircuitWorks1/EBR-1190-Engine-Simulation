@@ -1,2 +1,2 @@
 # EBR-1190-Engine-Simulation
-This is an engine sensor simulator designed for the EBR 1190rx/sx to diagnose a failed ECM.
+This is an engine sensor simulator designed for the EBR 1190rx/sx to diagnose a failed ECM. The project was started to assist with the reverse engineering of the CANbus system. The program focuses on simulating 2 main sensors. The crankshaft sensor(RPM) and the speed sensor. The crankshaft sensor is vital to the simulation, as the ECM will not acknowledge other input data, unless there is proper crankshaft data input to the ECM. 
