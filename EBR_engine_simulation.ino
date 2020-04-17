@@ -54,7 +54,7 @@ void speedFunction() {
 }
 
 void setup() {
-  //set pin35 to output. This will be the pin used to simulate 
+  //set pin35 to output. This will be the pin used to simulate the speed sensor
   pinMode(35, OUTPUT);
 }
 
