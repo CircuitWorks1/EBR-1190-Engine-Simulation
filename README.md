@@ -12,9 +12,13 @@ rpmRestart = 1 / rpmFreq * 1000000 * 36
 A non-blocking delay was then created to loop the waveform until it was looped 34 times(the equivalent to rpmTime in microseconds). Then came the timing gap. If the non-blocking delay counter was between rpmTime and rpmRestart, we would loop with no PWM tone. Once the non-blocking delay counter had reached a value > rpmRestart, the counter is restarted allowing the 34 wavecycles to start again.
 ```
 If waveStartTime > rpmTime
+
 	wave(stop)
+	
 If waveStartTime > rpmRestart
+
 	wave(start)
+
 	waveStartTime = 0
 ```
 Now we focus on generating the wave used to simulate the speed sensor output. The speed sensor simulation is a bit more basic because there is no timing gap. To simulate the speed sensor waveform we will take the given frequency, that was input by the user and rapidly turn on and off one of the pins. This will generate a squarewave at the given frequency.
