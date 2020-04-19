@@ -18,7 +18,7 @@ First we find out the period to complete 1 wavecycle in microseconds
 speedTime = 1 / speedFreq * 1000000
 
 We can then devide that by 2, to find out how long the pin should remain in each state. We control this action with another non-blocking delay. 
-
+```
 If delay timer < speedTime/2 
 
 pin off
@@ -30,3 +30,4 @@ pin on
 If delay timer > speedTime
 
 restart delay timer
+```
