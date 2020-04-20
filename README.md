@@ -10,7 +10,7 @@ and
 rpmRestart = 1 / rpmFreq * 1000000 * 36
 
 A non-blocking delay was then created to loop the waveform until it was looped 34 times(the equivalent to rpmTime in microseconds). Then came the timing gap. If the non-blocking delay counter was between rpmTime and rpmRestart, we would loop with no PWM tone. Once the non-blocking delay counter had reached a value > rpmRestart, the counter is restarted allowing the 34 wavecycles to start again.
-```
+```javascript
 If waveStartTime > rpmTime
 
 	wave(stop)
@@ -28,7 +28,7 @@ First we find out the period to complete 1 wavecycle in microseconds
 speedTime = 1 / speedFreq * 1000000
 
 We can then devide that by 2, to find out how long the pin should remain in each state. We control this action with another non-blocking delay. 
-```
+```javascript
 If delay timer < speedTime/2 
 
 pin off
